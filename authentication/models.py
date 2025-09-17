@@ -23,15 +23,18 @@ class Department(models.Model):
 class City(models.Model):
     name = models.CharField(max_length=100)
     abrev = models.CharField(max_length=10, blank=True, null=True)
+    code = models.CharField(max_length=10, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 class Country(models.Model):
     name = models.CharField(max_length=100)
     abrev = models.CharField(max_length=10, blank=True, null=True)
+    code = models.CharField(max_length=10, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+'''
 User.add_to_class(
     'city',
     models.ForeignKey("City", on_delete=models.CASCADE, related_name="users", null=True, blank=True)
@@ -46,3 +49,4 @@ Department.add_to_class(
     'country',
     models.ForeignKey("Country", on_delete=models.CASCADE, related_name="departments", null=True, blank=True)
 )
+'''

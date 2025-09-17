@@ -88,6 +88,14 @@ DATABASES = {
         'PASSWORD': env('DB_PASSWORD'),
         'PORT': env('DB_PORT', default='5433'),
     },
+    'supabase': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': '',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'PORT': '',
+    },
 
     'local': {
         'ENGINE': 'django.db.backends.sqlite3',
