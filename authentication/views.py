@@ -1,3 +1,9 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 # Create your views here.
+def index(request):
+    return HttpResponse(" - - - - ¡This is my first view! - - - - ")
+def country(request):
+    return HttpResponse(" - - - - ¡COUNTRY! - - - - ")
+def city(request):
+    return HttpResponse(" - - - - ¡CITY! - - - - ")
